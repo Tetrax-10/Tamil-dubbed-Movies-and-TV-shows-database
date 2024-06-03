@@ -1,6 +1,6 @@
 # Tamil-dubbed-Movies-and-TV-shows-database
 
-A nodejs script that scrapes IsaiDub website for Tamil dubbed Movies and TV shows. This database was last extracted on December 12, 2023
+This is automated script that extracts Tamil dubbed Movies and TV shows from external sources and add it to my IMDB/TMDB list. This database was last extracted on December 12, 2023
 
 #### This database is available as Lists in [IMDb](https://www.imdb.com/list/ls523475654/), [TMDB](https://www.themoviedb.org/list/8301936), [Letterboxd](https://letterboxd.com/raghavan_rave/list/all-tamil-dubbed-movies-and-tv-shows/)
 
