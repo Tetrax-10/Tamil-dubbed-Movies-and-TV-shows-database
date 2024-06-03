@@ -1,0 +1,6 @@
+dev
+.vscode
+node_modules
+scripts
+*.txt
+.env

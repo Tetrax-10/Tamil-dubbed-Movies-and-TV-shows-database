@@ -1,0 +1,50 @@
+{
+    "name": "tamil-dubbed-movies-tv-shows-database",
+    "description": "This is automated script that extracts Tamil dubbed Movies and TV shows from external sources and add it to my IMDB/TMDB list",
+    "author": "Tetrax-10",
+    "license": "MIT",
+    "main": "src/index.js",
+    "type": "module",
+    "scripts": {
+        "format": "prettier --write .",
+        "lint": "eslint src",
+        "engine": "node src/index.js",
+        "extract-isaiDub": "node src/index.js -is -e -a",
+        "concat-isaiDub": "node src/index.js -is -co -db",
+        "process-isaiDub": "node src/index.js -is -p -db",
+        "update-isaiDub": "node src/index.js -is -u -db",
+        "extract-imdb": "node src/index.js -im -e",
+        "process-imdb": "node src/index.js -im -p -db",
+        "refetch-imdb": "node src/index.js -im -r",
+        "update-imdb": "node src/index.js -im -u -db",
+        "createMismatched-imdb": "node src/index.js -im -m",
+        "update-imdb-cache": "node src/index.js -im -u -c",
+        "clear-imdb-list": "node src/index.js -im -cl -l",
+        "upload-imdb-list": "node src/index.js -im -up -l",
+        "update-imdb-list": "node src/index.js -im -u -l",
+        "sync-imdb-list": "node src/index.js -im -sy -l",
+        "createCsv-imdb": "node src/index.js -im -csv",
+        "extract-tmdb": "node src/index.js -tm -e",
+        "process-tmdb": "node src/index.js -tm -p -db",
+        "update-tmdb": "node src/index.js -tm -u -db",
+        "update-tmdb-cache": "node src/index.js -tm -u -c",
+        "clear-tmdb-list": "node src/index.js -tm -cl -l",
+        "upload-tmdb-list": "node src/index.js -tm -up -l",
+        "update-tmdb-list": "node src/index.js -tm -u -l",
+        "sort-public-folder": "node src/index.js -s"
+    },
+    "dependencies": {
+        "@pinojs/json-colorizer": "^4.0.0",
+        "axios": "^1.6.2",
+        "chalk": "^5.3.0",
+        "cheerio": "^1.0.0-rc.12",
+        "commander": "^11.1.0",
+        "dotenv": "^16.3.1",
+        "prettier": "^2.8.8",
+        "puppeteer": "^21.5.2"
+    },
+    "devDependencies": {
+        "eslint": "^8.55.0",
+        "eslint-plugin-import": "^2.29.0"
+    }
+}
