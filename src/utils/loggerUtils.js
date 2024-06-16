@@ -87,22 +87,3 @@ const LoggerUtils = (() => {
 })()
 
 export default LoggerUtils
-
-const Logger = LoggerUtils.getLogger("IMDB")
-
-// Logger.error({ msg: "these" })
-// Logger.error({ msg: "Poda da", value: "The dark knight (2015)" })
-// Logger.error({ value: { movie: "sarvam", year: 2012 } })
-// Logger.error({ value: ["sgsghsdf", 2156, "fadfda"] })
-
-try {
-    try {
-        console.log(a)
-    } catch (error) {
-        console.log(error)
-        throw new Error("Fuck", error)
-    }
-} catch (error) {
-    console.log(error)
-    Logger.error({ err: error })
-}
