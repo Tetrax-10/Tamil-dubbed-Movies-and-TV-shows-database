@@ -6,23 +6,8 @@ const Glob = (() => {
     const prettierConfig = getJsonObject("./.prettierrc.json")
 
     function createFolder(folderPath) {
-        function createFolderRecursive(dirPath) {
-            const parts = dirPath.split(path.sep)
-
-            for (let i = 1; i <= parts.length; i++) {
-                const currentPath = path.join.apply(null, parts.slice(0, i))
-
-                if (!fs.existsSync(currentPath)) {
-                    fs.mkdirSync(currentPath)
-                }
-            }
-        }
-
-        const parts = folderPath.split(path.sep)
-
-        for (let i = 1; i <= parts.length; i++) {
-            const currentPath = path.join.apply(null, parts.slice(0, i))
-            createFolderRecursive(currentPath)
+        if (!fs.existsSync(folderPath)) {
+            fs.mkdirSync(folderPath, { recursive: true })
         }
     }
 
@@ -51,10 +36,14 @@ const Glob = (() => {
     }
 
     function writeJSON(filePath, object) {
+        const folderPath = path.dirname(filePath)
+        createFolder(folderPath)
         fs.writeFileSync(filePath, formatJson(object))
     }
 
     function writeFile(filePath, content) {
+        const folderPath = path.dirname(filePath)
+        createFolder(folderPath)
         fs.writeFileSync(filePath, content)
     }
 

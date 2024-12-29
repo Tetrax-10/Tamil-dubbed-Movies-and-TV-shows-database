@@ -12,7 +12,7 @@ const Shared = {
     },
     isaiDub: {
         url: {
-            main: "https://isaidub8.com/",
+            main: "https://isaidub9.net/",
             sub: {
                 daily: "/movie/tamil-dubbed-movies-download",
                 yearly: (year) => `/tamil-${year}-dubbed-movies`,
