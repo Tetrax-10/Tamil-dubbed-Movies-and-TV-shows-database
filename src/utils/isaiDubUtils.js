@@ -45,7 +45,7 @@ const IsaiDubUtils = (() => {
 
         console.log(chalk.blue("Merging all scraped IsaiDub database into one..."))
 
-        const isaiDubDbDailyDb = Glob.get.json(Shared.isaiDub.path.raw.daily)
+        const isaiDubDbDailyDb = Array.from(new Set(Glob.get.json(Shared.isaiDub.path.raw.daily).reverse())).reverse()
         const isaiDubDbYearlyDb = [].concat(...Object.values(Glob.get.json(Shared.isaiDub.path.raw.yearly)).reverse())
         const isaiDubDbAlphabeticalDb = Glob.get.json(Shared.isaiDub.path.raw.alphabetical)
 
