@@ -6,13 +6,13 @@ const Shared = {
     args: {}, // auto generated program arguments
     puppeteer: {
         path: {
-            executable: path.join(process.env.LOCALAPPDATA, "/Google/Chrome SxS/Application/chrome.exe"),
-            data: path.join(process.env.LOCALAPPDATA, "/Google/Chrome SxS/User Data"),
+            executable: "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe",
+            data: "C:/Users/ragha/AppData/Local/Microsoft/Edge/User Data",
         },
     },
     isaiDub: {
         url: {
-            main: "https://isaidub9.net/",
+            main: "https://isaidub.love/",
             sub: {
                 daily: "/movie/tamil-dubbed-movies-download",
                 yearly: (year) => `/tamil-${year}-dubbed-movies`,
@@ -20,8 +20,8 @@ const Shared = {
             },
         },
         selector: {
-            titleName: "body > .f > a",
-            pageNum: "body > .isaiminida > a[title*='Page ']",
+            titleName: "body > div > .f > a",
+            pageNum: "body .pagination a[title*='Page ']",
         },
         path: {
             folder: {
@@ -41,15 +41,15 @@ const Shared = {
     },
     imdb: {
         selector: {
-            titleName: "a.ipc-metadata-list-summary-item__t[href*='/title/']",
-            year: "span.ipc-metadata-list-summary-item__li",
+            titleName: "section[data-testid='find-results-section-title'] div.ipc-title--title >  a[href*='/title/tt']",
+            year: "section[data-testid='find-results-section-title'] div.cli-title-metadata > span:first-child",
             list: {
-                firstTitleElement: "div.lister-item-title a[href*='/title/tt']",
+                firstTitleElement: "section.ipc-page-section div.ipc-title--title >  a[href*='/title/tt'] > h3",
                 positionInput: "input.element-position-input",
                 saveListOrderButton: "a.lister-save-order",
-                selectAllCheckbox: "input.element-check-total",
-                deleteButton: "#delete_items",
-                confirmDeleteButton: "input[value='DELETE']",
+                selectAllCheckbox: "input#list-edit-select-all-items",
+                deleteButton: "button[data-testid='list-edit-delete-items']",
+                confirmDeleteButton: "button[data-testid='dlp-delete-btn']",
             },
         },
         path: {
@@ -63,7 +63,7 @@ const Shared = {
             csv: "./out/imdb/imdbOrLetterboxdList.csv",
             duplicateTitle: path.join(userProfilePath, "Desktop/TDMTDB", "IMDB Duplicate Titles.json"),
         },
-        listId: "ls523475654",
+        listId: "ls4154277024",
     },
     tmdb: {
         path: {

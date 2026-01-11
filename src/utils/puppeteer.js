@@ -1,4 +1,4 @@
-import puppeteer from "puppeteer"
+import puppeteer from "puppeteer-core"
 import chalk from "chalk"
 
 import Shared from "../shared/shared.js"
