@@ -7,7 +7,7 @@ const Shared = {
     puppeteer: {
         path: {
             executable: "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe",
-            data: "C:/Users/ragha/AppData/Local/Microsoft/Edge/User Data",
+            data: path.join(process.env.LOCALAPPDATA, "/Microsoft/Edge/User Data"),
         },
     },
     isaiDub: {
@@ -63,7 +63,7 @@ const Shared = {
             csv: "./out/imdb/imdbOrLetterboxdList.csv",
             duplicateTitle: path.join(userProfilePath, "Desktop/TDMTDB", "IMDB Duplicate Titles.json"),
         },
-        listId: "ls4154277024",
+        listId: "ls523475654",
     },
     tmdb: {
         path: {
